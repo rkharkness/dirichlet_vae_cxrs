@@ -31,7 +31,6 @@ To get started with this repository, follow these steps:
 2. Set up your Python environment with the required dependencies (list them in a `requirements.txt` file).
 3. Download and prepare the CheXpert dataset (not included in this repository but available here: [https://stanfordaimi.azurewebsites.net/datasets/]()).
 4. Train the DirVAE models using `main.py`.
-5. Explore the Jupyter notebooks in the `notebooks/` directory for experiments and visualizations.
 
 ## Results
 
@@ -39,16 +38,9 @@ We show that when applied to the trained DirVAE, our explainability approach, te
 
 ![1698774008056](image/README/1698774008056.png)											![1698773966770](image/README/1698773966770.png)
 
-
-
 ![1698774592640](image/README/1698774592640.png)
 
 Our findings and results are detailed in the paper. You can also find trained model checkpoints and visual examples in the `results/` directory. For more details, refer to the paper.
-
-
-## License
-
-This project is licensed under the [License Name] - see the [LICENSE](LICENSE) file for details.
 
 ## Contact Information
 

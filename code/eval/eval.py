@@ -290,6 +290,8 @@ if __name__ == "__main__":
     parser.add_argument('--lr', default=1e-4, type=float, help='Optimizer learning rate')
     parser.add_argument('--optimizer', default='adam', type=str, help='Optimizer')
     parser.add_argument('--k', type=int, help='Cross val iteration')
+    parser.add_argument('--root', type=int, help='File root')
+
 
     args = parser.parse_args()
 
@@ -297,13 +299,13 @@ if __name__ == "__main__":
 
     if args.prior ==  'gaussian':
         model = VAE(config).cuda()
-        model.load_state_dict(torch.load("/MULTIX/DATA/vae_clf.pth"))
+        model.load_state_dict(torch.load(f"{args.root}/vae_clf.pth"))
         model.eval()
         dir = False
 
     else:
         model= dirVAE(config).cuda()
-        model.load_state_dict(torch.load(f"/MULTIX/DATA/dir_vae_k{args.k}_clf_stable_conc05.pth"))
+        model.load_state_dict(torch.load(f"/{args.root}/dir_vae_k{args.k}_clf_stable_conc05.pth"))
         model.eval()
         dir = True
 
